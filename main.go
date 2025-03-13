@@ -1,21 +1,33 @@
 package main
 
 import (
-  "fmt"
+	"bulebell/dao/mysql"
+	"bulebell/logger"
+	"bulebell/router"
+	"bulebell/settings"
+	"fmt"
 )
-
-//TIP <p>To run your code, right-click the code and select <b>Run</b>.</p> <p>Alternatively, click
-// the <icon src="AllIcons.Actions.Execute"/> icon in the gutter and select the <b>Run</b> menu item from here.</p>
-
 func main() {
-  //TIP <p>Press <shortcut actionId="ShowIntentionActions"/> when your caret is at the underlined text
-  // to see how GoLand suggests fixing the warning.</p><p>Alternatively, if available, click the lightbulb to view possible fixes.</p>
-  s := "gopher"
-  fmt.Println("Hello and welcome, %s!", s)
-
-  for i := 1; i <= 5; i++ {
-	//TIP <p>To start your debugging session, right-click your code in the editor and select the Debug option.</p> <p>We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-	// for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.</p>
-	fmt.Println("i =", 100/i)
-  }
+	// 1. 加载配置
+	settings.Init();
+	// 2. 初始化日志
+	if err := logger.InitLogger(); err != nil {
+		fmt.Printf("init logger failed, err:%v\n", err)
+		return
+	}
+	// 3. 初始化 Mysql 连接
+	if err := mysql.Init(); err != nil {
+		fmt.Printf("init mysql failed, err:%v\n", err)
+		return
+	}
+	defer mysql.Close()
+	// 4. 初始化 Redis 连接
+	//if err := redis.Init(); err != nil {
+	//	fmt.Printf("init redis failed, err:%v\n", err)
+	//	return
+	//}
+	//defer redis.Close()
+	// 5. 初始化 Router
+	r := router.SetUpRouter()
+	r.Run("127.0.0.1:8081")
 }

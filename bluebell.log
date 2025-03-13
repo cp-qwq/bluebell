@@ -1,0 +1,6 @@
+{"level":"ERROR","time":"2025-03-13T23:44:28.506+0800","caller":"controller/user.go:16","msg":"SignUpHandler ShouldBindJSON err{error 26 0  json: Unmarshal(non-pointer models.ParamSignUp)}"}
+{"level":"ERROR","time":"2025-03-13T23:45:05.089+0800","caller":"controller/user.go:16","msg":"SignUpHandler ShouldBindJSON err{error 26 0  invalid character '\"' after object key}"}
+{"level":"ERROR","time":"2025-03-13T23:45:11.380+0800","caller":"controller/user.go:16","msg":"SignUpHandler ShouldBindJSON err{error 26 0  json: Unmarshal(non-pointer models.ParamSignUp)}"}
+{"level":"ERROR","time":"2025-03-13T23:45:32.551+0800","caller":"controller/user.go:16","msg":"SignUpHandler ShouldBindJSON err{error 26 0  json: Unmarshal(non-pointer models.ParamSignUp)}"}
+{"level":"ERROR","time":"2025-03-13T23:45:44.751+0800","caller":"controller/user.go:16","msg":"SignUpHandler ShouldBindJSON err{error 26 0  json: Unmarshal(non-pointer models.ParamSignUp)}"}
+{"level":"ERROR","time":"2025-03-13T23:46:00.577+0800","caller":"controller/user.go:16","msg":"SignUpHandler ShouldBindJSON err{error 26 0  json: Unmarshal(non-pointer models.ParamSignUp)}"}
