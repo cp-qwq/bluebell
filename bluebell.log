@@ -4,3 +4,4 @@
 {"level":"ERROR","time":"2025-03-13T23:45:32.551+0800","caller":"controller/user.go:16","msg":"SignUpHandler ShouldBindJSON err{error 26 0  json: Unmarshal(non-pointer models.ParamSignUp)}"}
 {"level":"ERROR","time":"2025-03-13T23:45:44.751+0800","caller":"controller/user.go:16","msg":"SignUpHandler ShouldBindJSON err{error 26 0  json: Unmarshal(non-pointer models.ParamSignUp)}"}
 {"level":"ERROR","time":"2025-03-13T23:46:00.577+0800","caller":"controller/user.go:16","msg":"SignUpHandler ShouldBindJSON err{error 26 0  json: Unmarshal(non-pointer models.ParamSignUp)}"}
+{"level":"ERROR","time":"2025-03-14T15:48:15.473+0800","caller":"controller/user.go:17","msg":"SignUpHandler ShouldBindJSON err{error 26 0  Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag}"}
