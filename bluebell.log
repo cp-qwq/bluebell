@@ -5,3 +5,23 @@
 {"level":"ERROR","time":"2025-03-13T23:45:44.751+0800","caller":"controller/user.go:16","msg":"SignUpHandler ShouldBindJSON err{error 26 0  json: Unmarshal(non-pointer models.ParamSignUp)}"}
 {"level":"ERROR","time":"2025-03-13T23:46:00.577+0800","caller":"controller/user.go:16","msg":"SignUpHandler ShouldBindJSON err{error 26 0  json: Unmarshal(non-pointer models.ParamSignUp)}"}
 {"level":"ERROR","time":"2025-03-14T15:48:15.473+0800","caller":"controller/user.go:17","msg":"SignUpHandler ShouldBindJSON err{error 26 0  Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag}"}
+{"level":"ERROR","time":"2025-03-15T14:17:10.758+0800","caller":"controller/user.go:29","msg":"logic.SignUp failed","error":"用户已存在"}
+{"level":"ERROR","time":"2025-03-15T14:17:37.071+0800","caller":"controller/user.go:61","msg":"logic.Login failed","username":"cp","error":"密码错误"}
+{"level":"ERROR","time":"2025-03-15T14:18:01.958+0800","caller":"controller/user.go:29","msg":"logic.SignUp failed","error":"用户已存在"}
+{"level":"INFO","time":"2025-03-15T14:22:43.362+0800","caller":"mysql/user.go:38","msg":"$2a$10$S/ihdUUEPytmVFfUrzBxWes8h9s8O65qEIG1Jx3.QE0gUUhxf2m5q123"}
+{"level":"ERROR","time":"2025-03-15T14:22:43.433+0800","caller":"controller/user.go:61","msg":"logic.Login failed","username":"cp","error":"密码错误"}
+{"level":"INFO","time":"2025-03-15T14:23:40.920+0800","caller":"mysql/user.go:38","msg":"$2a$10$lWcZsQDGsz9pdZKIqF5mp.SumavZvxU1E9ChEGfKB2unhnW/aIx.W123"}
+{"level":"ERROR","time":"2025-03-15T14:23:40.974+0800","caller":"controller/user.go:61","msg":"logic.Login failed","username":"lzy","error":"密码错误"}
+{"level":"INFO","time":"2025-03-15T14:25:11.026+0800","caller":"mysql/user.go:38","msg":"$2a$10$lWcZsQDGsz9pdZKIqF5mp.SumavZvxU1E9ChEGfKB2unhnW/aIx.W"}
+{"level":"INFO","time":"2025-03-15T14:25:11.102+0800","caller":"mysql/user.go:39","msg":"[36 50 97 36 49 48 36 78 79 84 46 111 115 82 86 105 65 51 50 102 67 86 87 117 71 50 98 115 46 66 76 67 114 100 77 101 85 122 101 105 102 110 110 57 119 83 81 71 78 49 84 115 77 111 82 51 68 86 73 97] <nil>"}
+{"level":"ERROR","time":"2025-03-15T14:25:11.155+0800","caller":"controller/user.go:61","msg":"logic.Login failed","username":"lzy","error":"密码错误"}
+{"level":"INFO","time":"2025-03-15T14:25:53.473+0800","caller":"mysql/user.go:38","msg":"$2a$10$lWcZsQDGsz9pdZKIqF5mp.SumavZvxU1E9ChEGfKB2unhnW/aIx.W"}
+{"level":"INFO","time":"2025-03-15T14:25:53.544+0800","caller":"mysql/user.go:40","msg":"[36 50 97 36 49 48 36 70 89 74 105 87 71 78 98 56 103 54 85 72 113 56 122 110 51 56 48 47 101 78 51 48 81 112 102 109 98 112 87 55 119 57 77 79 69 99 65 70 70 49 108 55 77 79 81 54 47 53 69 121]"}
+{"level":"ERROR","time":"2025-03-15T14:25:53.595+0800","caller":"controller/user.go:61","msg":"logic.Login failed","username":"lzy","error":"密码错误"}
+{"level":"INFO","time":"2025-03-15T14:26:13.722+0800","caller":"mysql/user.go:38","msg":"$2a$10$lWcZsQDGsz9pdZKIqF5mp.SumavZvxU1E9ChEGfKB2unhnW/aIx.W"}
+{"level":"INFO","time":"2025-03-15T14:26:13.798+0800","caller":"mysql/user.go:40","msg":"$2a$10$YAM7pv1npbWgzv6uzjr1YefY/Zgx0/LLu0l3ZUix92bC/YEBshviW"}
+{"level":"ERROR","time":"2025-03-15T14:26:13.849+0800","caller":"controller/user.go:61","msg":"logic.Login failed","username":"lzy","error":"密码错误"}
+{"level":"ERROR","time":"2025-03-15T14:26:53.618+0800","caller":"controller/user.go:29","msg":"logic.SignUp failed","error":"用户已存在"}
+{"level":"INFO","time":"2025-03-15T14:27:01.879+0800","caller":"mysql/user.go:38","msg":"$2a$10$EIA6SMwai3YtK56OXDzZKeBUpjPmbPQPRujuhW9B.WUktyLI712kC"}
+{"level":"INFO","time":"2025-03-15T14:27:01.932+0800","caller":"mysql/user.go:40","msg":"$2a$10$PF2jcfct07kBCOUYBphNOeYg7OpN.t8YjwPDzy6GMQqYJR61edmie"}
+{"level":"ERROR","time":"2025-03-15T14:27:01.984+0800","caller":"controller/user.go:61","msg":"logic.Login failed","username":"cp1","error":"密码错误"}
