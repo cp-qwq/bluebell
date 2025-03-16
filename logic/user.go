@@ -3,6 +3,7 @@ package logic
 import (
 	"bulebell/dao/mysql"
 	"bulebell/models"
+	"bulebell/pkg/jwt"
 	"bulebell/pkg/snowflake"
 	"errors"
 )
@@ -27,10 +28,14 @@ func SignUp(p *models.ParamSignUp) (err error) {
 	return mysql.InsertUser(user)
 }
 
-func Login(p *models.ParamLogin) error {
+func Login(p *models.ParamLogin) (token string, err error) {
 	user := models.User{
 		Username: p.Username,
 		Password: p.Password,
 	}
-	return mysql.Login(&user)
+	if err := mysql.Login(&user); err != nil {
+		return "", err
+	}
+	// 生成 JWT 
+	return jwt.GenToken(user.UserID, user.Username)
 }

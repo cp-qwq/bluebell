@@ -2,12 +2,10 @@ package middlewares
 
 import (
 	"bulebell/controller"
-	"bulebell/pkg/pkg/jwt"
+	"bulebell/pkg/jwt"
 	"github.com/gin-gonic/gin"
 	"strings"
 )
-
-
 
 // JWTAuthMiddleware 基于JWT的认证中间件
 func JWTAuthMiddleware() func(c *gin.Context) {
@@ -37,7 +35,7 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 			return
 		}
 		// 将当前请求的userID信息保存到请求的上下文c上
-		c.Set(CtxUserIdKey, mc.UserID)
+		c.Set(controller.CtxUserIdKey, mc.UserID)
 
 		c.Next() // 后续的处理请求的函数中 可以用过c.Get(CtxUserIDKey) 来获取当前请求的用户信息
 	}

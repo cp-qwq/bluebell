@@ -7,7 +7,7 @@ import (
 	"github.com/dgrijalva/jwt-go"
 )
 
-const TokenExipireDuration = time.Hour * 2
+const TokenExipireDuration = time.Hour * 2 * 365
 
 var mySecret = []byte("夏天夏天悄悄过去~")
 

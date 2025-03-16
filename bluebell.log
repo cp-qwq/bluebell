@@ -25,3 +25,5 @@
 {"level":"INFO","time":"2025-03-15T14:27:01.879+0800","caller":"mysql/user.go:38","msg":"$2a$10$EIA6SMwai3YtK56OXDzZKeBUpjPmbPQPRujuhW9B.WUktyLI712kC"}
 {"level":"INFO","time":"2025-03-15T14:27:01.932+0800","caller":"mysql/user.go:40","msg":"$2a$10$PF2jcfct07kBCOUYBphNOeYg7OpN.t8YjwPDzy6GMQqYJR61edmie"}
 {"level":"ERROR","time":"2025-03-15T14:27:01.984+0800","caller":"controller/user.go:61","msg":"logic.Login failed","username":"cp1","error":"密码错误"}
+{"level":"ERROR","time":"2025-03-15T21:07:44.343+0800","caller":"controller/post.go:60","msg":"logic.GetPostList() failed","error":"Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1"}
+{"level":"ERROR","time":"2025-03-15T21:08:57.043+0800","caller":"controller/post.go:60","msg":"logic.GetPostList() failed","error":"Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1"}
