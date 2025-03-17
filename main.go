@@ -3,6 +3,7 @@ package main
 import (
 	"bulebell/controller"
 	"bulebell/dao/mysql"
+	"bulebell/dao/redis"
 	"bulebell/logger"
 	"bulebell/pkg/snowflake"
 	"bulebell/router"
@@ -25,11 +26,11 @@ func main() {
 	}
 	defer mysql.Close()
 	// 4. 初始化 Redis 连接
-	//if err := redis.Init(); err != nil {
-	//	fmt.Printf("init redis failed, err:%v\n", err)
-	//	return
-	//}
-	//defer redis.Close()
+	if err := redis.Init(); err != nil {
+		fmt.Printf("init redis failed, err:%v\n", err)
+		return
+	}
+	defer redis.Close()
 
 	// 初始化雪花算法
 	if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineID); err != nil {

@@ -27,3 +27,38 @@
 {"level":"ERROR","time":"2025-03-15T14:27:01.984+0800","caller":"controller/user.go:61","msg":"logic.Login failed","username":"cp1","error":"密码错误"}
 {"level":"ERROR","time":"2025-03-15T21:07:44.343+0800","caller":"controller/post.go:60","msg":"logic.GetPostList() failed","error":"Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1"}
 {"level":"ERROR","time":"2025-03-15T21:08:57.043+0800","caller":"controller/post.go:60","msg":"logic.GetPostList() failed","error":"Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1"}
+{"level":"ERROR","time":"2025-03-17T12:57:11.275+0800","caller":"controller/vote.go:15","msg":"BindJSON failed","postId":"","error":"json: invalid use of ,string struct tag, trying to unmarshal \"622781251798962176\" into string"}
+{"level":"ERROR","time":"2025-03-17T13:03:12.347+0800","caller":"controller/vote.go:31","msg":"logic.VoteForPost failed","error":"投票时间已过"}
+{"level":"ERROR","time":"2025-03-17T13:05:49.691+0800","caller":"controller/vote.go:31","msg":"logic.VoteForPost failed","error":"投票时间已过"}
+{"level":"INFO","time":"2025-03-17T13:06:21.547+0800","caller":"redis/vote.go:61","msg":"0"}
+{"level":"ERROR","time":"2025-03-17T13:06:21.547+0800","caller":"controller/vote.go:31","msg":"logic.VoteForPost failed","error":"投票时间已过"}
+{"level":"INFO","time":"2025-03-17T13:09:39.922+0800","caller":"redis/vote.go:61","msg":"1.742188163e+09"}
+{"level":"ERROR","time":"2025-03-17T13:10:19.633+0800","caller":"controller/vote.go:15","msg":"BindJSON failed","postId":"623384990020800512","error":"Key: 'ParamVoteData.direction' Error:Field validation for 'direction' failed on the 'required' tag"}
+{"level":"INFO","time":"2025-03-17T13:10:37.465+0800","caller":"redis/vote.go:61","msg":"1.742188163e+09"}
+{"level":"INFO","time":"2025-03-17T13:10:52.781+0800","caller":"redis/vote.go:61","msg":"1.742188163e+09"}
+{"level":"ERROR","time":"2025-03-17T13:11:52.476+0800","caller":"controller/vote.go:15","msg":"BindJSON failed","postId":"623384990020800512","error":"json: invalid use of ,string struct tag, trying to unmarshal unquoted value into int8"}
+{"level":"ERROR","time":"2025-03-17T13:12:05.475+0800","caller":"controller/vote.go:15","msg":"BindJSON failed","postId":"623384990020800512","error":"Key: 'ParamVoteData.direction' Error:Field validation for 'direction' failed on the 'required' tag"}
+{"level":"ERROR","time":"2025-03-17T13:14:20.210+0800","caller":"controller/vote.go:15","msg":"BindJSON failed","postId":"623384990020800512","error":"json: cannot unmarshal string into Go struct field ParamVoteData.direction of type int8"}
+{"level":"ERROR","time":"2025-03-17T13:15:01.768+0800","caller":"controller/vote.go:15","msg":"BindJSON failed","postId":"623384990020800512","error":"Key: 'ParamVoteData.direction' Error:Field validation for 'direction' failed on the 'required' tag"}
+{"level":"ERROR","time":"2025-03-17T13:16:10.275+0800","caller":"controller/vote.go:15","msg":"BindJSON failed","postId":"623384990020800512","error":"Key: 'ParamVoteData.direction' Error:Field validation for 'direction' failed on the 'required' tag"}
+{"level":"INFO","time":"2025-03-17T13:19:19.198+0800","caller":"redis/vote.go:61","msg":"1.742188163e+09"}
+{"level":"INFO","time":"2025-03-17T14:14:24.301+0800","caller":"controller/post.go:87","msg":"page = 1, size = 10"}
+{"level":"INFO","time":"2025-03-17T14:14:41.354+0800","caller":"controller/post.go:92","msg":"page = 1, size = 2"}
+{"level":"INFO","time":"2025-03-17T14:34:30.973+0800","caller":"redis/vote.go:61","msg":"1.742188163e+09"}
+{"level":"INFO","time":"2025-03-17T14:35:05.315+0800","caller":"redis/vote.go:61","msg":"1.742188163e+09"}
+{"level":"ERROR","time":"2025-03-17T14:35:05.315+0800","caller":"controller/vote.go:31","msg":"logic.VoteForPost failed","error":"投票时间已过"}
+{"level":"INFO","time":"2025-03-17T14:35:54.581+0800","caller":"redis/vote.go:61","msg":"1.742188163e+09"}
+{"level":"INFO","time":"2025-03-17T14:35:57.343+0800","caller":"redis/vote.go:61","msg":"1.742188163e+09"}
+{"level":"INFO","time":"2025-03-17T14:36:34.227+0800","caller":"redis/vote.go:61","msg":"1.74219183e+09"}
+{"level":"INFO","time":"2025-03-17T14:43:32.101+0800","caller":"redis/post.go:50","msg":"v = %d0"}
+{"level":"INFO","time":"2025-03-17T14:43:32.122+0800","caller":"redis/post.go:50","msg":"v = %d0"}
+{"level":"INFO","time":"2025-03-17T14:43:32.122+0800","caller":"redis/post.go:50","msg":"v = %d0"}
+{"level":"INFO","time":"2025-03-17T14:43:32.122+0800","caller":"redis/post.go:50","msg":"v = %d0"}
+{"level":"INFO","time":"2025-03-17T14:44:11.212+0800","caller":"redis/post.go:50","msg":"v = 0"}
+{"level":"INFO","time":"2025-03-17T14:44:11.233+0800","caller":"redis/post.go:50","msg":"v = 0"}
+{"level":"INFO","time":"2025-03-17T14:44:11.233+0800","caller":"redis/post.go:50","msg":"v = 0"}
+{"level":"INFO","time":"2025-03-17T14:44:11.233+0800","caller":"redis/post.go:50","msg":"v = 0"}
+{"level":"INFO","time":"2025-03-17T14:48:09.660+0800","caller":"redis/post.go:50","msg":"v = 0"}
+{"level":"INFO","time":"2025-03-17T14:48:09.683+0800","caller":"redis/post.go:50","msg":"v = 1"}
+{"level":"INFO","time":"2025-03-17T14:48:09.683+0800","caller":"redis/post.go:50","msg":"v = 1"}
+{"level":"INFO","time":"2025-03-17T14:48:09.683+0800","caller":"redis/post.go:50","msg":"v = 0"}
