@@ -106,7 +106,7 @@ func GetPostList2(p *models.ParamPostList) (data []*models.ApiPostDetail, err er
 		return nil, err
 	}
 
-	data := make([]*models.ApiPostDetail, 0, len(posts))
+	data = make([]*models.ApiPostDetail, 0, len(posts))
 	for idx, post := range posts {
 		// 根据作者id查询作者信息
 		user, err := mysql.GetUserById(post.AuthorID)
@@ -189,6 +189,7 @@ func GetCommunityPostList(p *models.ParamPostList) (data []*models.ApiPostDetail
 	}
 	return 
 }
+
 
 // GetPostListNew 将两个查询接口合二为一
 func GetPostListNew(p * models.ParamPostList) (data []*models.ApiPostDetail, err error) {

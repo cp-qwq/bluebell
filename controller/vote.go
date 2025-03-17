@@ -9,6 +9,7 @@ import (
 )
 
 func VoteHandler(c *gin.Context) {
+	
 	// 参数校验，给哪个文章投什么票
 	var p models.ParamVoteData
 	if err := c.ShouldBindJSON(&p); err != nil {
@@ -26,11 +27,12 @@ func VoteHandler(c *gin.Context) {
 	userID, err := GetCurrentUserID(c)
 	if err != nil {
 		ResponseError(c, CodeNeedLogin)
+		return
 	}
 	if err := logic.VoteForPost(userID, &p); err != nil {
 		zap.L().Error("logic.VoteForPost failed", zap.Error(err))
 		ResponseError(c, CodeServerBusy)
-		return 
+		return
 	}
 	ResponseSuccess(c, nil)
 }
