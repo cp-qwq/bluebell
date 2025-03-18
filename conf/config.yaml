@@ -3,7 +3,6 @@ mode: "dev"
 port: 8081
 version: "v0.0.1"
 machine_id: 1
-start_time : "2020-07-01"
   
 log:
   level: "debug"

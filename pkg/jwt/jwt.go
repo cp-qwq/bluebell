@@ -8,7 +8,6 @@ import (
 )
 
 const TokenExipireDuration = time.Hour * 2 * 365
-
 var mySecret = []byte("夏天夏天悄悄过去~")
 
 // MyClaims 自定义声明结构体并内嵌jwt.StandardClaims
@@ -29,7 +28,7 @@ func GenToken(userID int64, username string) (string, error) {
 		"username", // 自定义字段
 		jwt.StandardClaims{
 			ExpiresAt: time.Now().Add(TokenExipireDuration).Unix(), // 过期时间
-			Issuer: "bluebell", // 签发人
+			Issuer:    "bluebell",                                  // 签发人
 		},
 	}
 	// 使用指定的签名方法创建签名对象

@@ -2,6 +2,7 @@ package settings
 
 import (
 	"fmt"
+
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 )
@@ -51,16 +52,16 @@ type LogConfig struct {
 func Init() {
 	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
-	viper.AddConfigPath(".")
+	viper.AddConfigPath("./conf")
 
 	if err := viper.ReadInConfig(); err != nil {
 		panic(err)
 	}
-	
+
 	if err := viper.Unmarshal(&Conf); err != nil {
 		panic(err)
 	}
-	
+
 	// 监听配置信息
 	viper.WatchConfig()
 	viper.OnConfigChange(func(in fsnotify.Event) {
